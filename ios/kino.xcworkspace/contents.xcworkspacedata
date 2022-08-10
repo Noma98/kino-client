@@ -2,9 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:lanple.xcodeproj">
+      location = "group:/Users/jinheui/hjh/private/projects/kino/ios/kino.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:kino.xcodeproj">
    </FileRef>
 </Workspace>

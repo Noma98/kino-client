@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "lanple.app"
-               BlueprintName = "lanple"
-               ReferencedContainer = "container:lanple.xcodeproj">
+               BuildableName = "kino.app"
+               BlueprintName = "kino"
+               ReferencedContainer = "container:kino.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "lanpleTests.xctest"
-               BlueprintName = "lanpleTests"
-               ReferencedContainer = "container:lanple.xcodeproj">
+               BuildableName = "kinoTests.xctest"
+               BlueprintName = "kinoTests"
+               ReferencedContainer = "container:kino.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "lanple.app"
-            BlueprintName = "lanple"
-            ReferencedContainer = "container:lanple.xcodeproj">
+            BuildableName = "kino.app"
+            BlueprintName = "kino"
+            ReferencedContainer = "container:kino.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "lanple.app"
-            BlueprintName = "lanple"
-            ReferencedContainer = "container:lanple.xcodeproj">
+            BuildableName = "kino.app"
+            BlueprintName = "kino"
+            ReferencedContainer = "container:kino.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

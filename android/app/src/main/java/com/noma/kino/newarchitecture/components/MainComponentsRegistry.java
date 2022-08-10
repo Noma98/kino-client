@@ -1,4 +1,4 @@
-package com.lanple.newarchitecture.components;
+package com.noma.kino.newarchitecture.components;
 
 import com.facebook.jni.HybridData;
 import com.facebook.proguard.annotations.DoNotStrip;
