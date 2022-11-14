@@ -1,14 +1,39 @@
 import 'styled-components';
-
+export type ColorType =
+  | 'main'
+  | 'mainLight'
+  | 'mainDark'
+  | 'secondary'
+  | 'bgDark'
+  | 'gray'
+  | 'grayLight'
+  | 'grayDark'
+  | 'black'
+  | 'white'
+  | 'red';
+export type FontSizeType = 's' | 'm' | 'l' | 'xl' | 'xxl';
+export type FontWeightType = 300 | 400 | 500 | 600 | 700;
 declare module 'styled-components' {
   export interface DefaultTheme {
     colors: {
       main: string;
-      secondary: string;
       mainLight: string;
       mainDark: string;
-      bgLight: string;
-      mainText: string;
+      secondary: string;
+      bgDark: string;
+      gray: string;
+      grayLight: string;
+      grayDark: string;
+      black: string;
+      white: string;
+      red: string;
+    };
+    textSize: {
+      s: number;
+      m: number;
+      l: number;
+      xl: number;
+      xxl: number;
     };
   }
 }

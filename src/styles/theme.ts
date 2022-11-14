@@ -1,13 +1,24 @@
 import {DefaultTheme} from 'styled-components';
 
-const theme: DefaultTheme = {
+export const theme: DefaultTheme = {
   colors: {
-    main: '#404360',
-    secondary: '#d5d6f5',
-    mainLight: '#f7f8fe',
-    mainDark: '#2F8D9E',
-    bgLight: '#EDE7D8',
-    mainText: '#424356',
+    main: '#52afab',
+    mainLight: '#7a65e7',
+    mainDark: '#01837c',
+    bgDark: '#191b1c',
+    secondary: '#e6bd7f',
+    gray: '#5e5e5e',
+    grayLight: '#bdbdbe',
+    grayDark: '#373737',
+    black: '#040505',
+    white: '#fdfdfd',
+    red: '#ff6738',
+  },
+  textSize: {
+    s: 13,
+    m: 16,
+    l: 24,
+    xl: 40,
+    xxl: 52,
   },
 };
-export {theme};
