@@ -7,6 +7,7 @@ install! 'cocoapods', :deterministic_uuids => false
 target 'kino' do
   config = use_native_modules!
 
+  pod 'KakaoSDK'
   # Flags change depending on the env values.
   flags = get_default_flags()
 

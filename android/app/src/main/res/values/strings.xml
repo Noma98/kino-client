@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">kino</string>
+    <string name="kakao_app_key">888acc04eb008aa77a824ace4107991b</string>
 </resources>
