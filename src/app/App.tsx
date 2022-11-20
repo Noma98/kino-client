@@ -1,3 +1,6 @@
+import React from 'react';
+import {StatusBar} from 'react-native';
+import {ThemeProvider} from 'styled-components/native';
 import {
   DefaultTheme,
   NavigationContainer,
@@ -5,12 +8,12 @@ import {
 } from '@react-navigation/native';
 import {useFlipper} from '@react-navigation/devtools';
 import {createStackNavigator} from '@react-navigation/stack';
-import React from 'react';
 import SignIn from '@screens/SignIn';
 import {theme} from '@/styles/theme';
-import {ThemeProvider} from 'styled-components/native';
-import {StatusBar} from 'react-native';
+import {library} from '@fortawesome/fontawesome-svg-core';
+import {fas} from '@fortawesome/free-solid-svg-icons';
 
+library.add(fas);
 const Stack = createStackNavigator();
 
 function App() {
