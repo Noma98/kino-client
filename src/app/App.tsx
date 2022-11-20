@@ -26,11 +26,11 @@ function App() {
         ref={navigationRef}
         theme={{
           ...DefaultTheme,
-          colors: {...DefaultTheme.colors, background: theme.colors.bgLight},
+          colors: {...DefaultTheme.colors, background: theme.colors.black},
         }}>
         <StatusBar
           barStyle="light-content"
-          backgroundColor={theme.colors.main}
+          backgroundColor={theme.colors.grayDark}
         />
         <Stack.Navigator
           initialRouteName="SignIn"
@@ -39,7 +39,7 @@ function App() {
               backgroundColor: theme.colors.main,
             },
             headerTitleStyle: {
-              fontSize: 18,
+              fontSize: theme.textSize.m,
               color: 'white',
             },
             headerTitleAlign: 'center',
