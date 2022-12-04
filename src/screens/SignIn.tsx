@@ -91,7 +91,7 @@ function SignIn({navigation}: IProps) {
 const LogoText = styled.Text`
   font-family: 'Lobster-Regular';
   color: ${props => props.theme.colors.main};
-  font-size: ${props => props.theme.textSize.xxl};
+  font-size: ${props => props.theme.textSize.xxl}px;
   text-align: center;
   margin: 100px 0 20px;
 `;

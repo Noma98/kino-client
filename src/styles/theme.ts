@@ -15,10 +15,10 @@ export const theme: DefaultTheme = {
     red: '#ff6738',
   },
   textSize: {
-    s: '13px',
-    m: '16px',
-    l: '24px',
-    xl: '40px',
-    xxl: '52px',
+    s: 13,
+    m: 16,
+    l: 24,
+    xl: 40,
+    xxl: 52,
   },
 };

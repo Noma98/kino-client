@@ -46,7 +46,7 @@ const InputContainer = styled.View``;
 const StyledInput = styled.TextInput`
   background-color: white;
   padding: 8px 20px;
-  font-size: ${props => props.theme.textSize.s};
+  font-size: ${props => props.theme.textSize.s}px;
   border-radius: 30px;
   margin-bottom: 12px;
 `;

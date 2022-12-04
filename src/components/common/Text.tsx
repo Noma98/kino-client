@@ -20,7 +20,7 @@ const StyledText = styled.Text<IPropsText>`
   font-size: ${props =>
     props.fontSize
       ? props.theme.textSize[props.fontSize]
-      : props.theme.textSize.m};
+      : props.theme.textSize.m}px;
   padding: ${props => props.padding || 0};
   margin: ${props => props.margin || 0};
   color: ${props =>
