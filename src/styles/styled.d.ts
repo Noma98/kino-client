@@ -29,11 +29,11 @@ declare module 'styled-components' {
       red: string;
     };
     textSize: {
-      s: number;
-      m: number;
-      l: number;
-      xl: number;
-      xxl: number;
+      s: string;
+      m: string;
+      l: string;
+      xl: string;
+      xxl: string;
     };
   }
 }
