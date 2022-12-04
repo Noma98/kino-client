@@ -24,7 +24,9 @@ function SignIn({navigation}: IProps) {
   const {localId, password} = formMethods.watch();
   const {signInWithKakao, signInWithLocal} = useSignIn({localId, password});
 
-  const goToSignUp = () => {};
+  const goToSignUp = () => {
+    navigation.navigate('SignUp');
+  };
   return (
     <BodyWrap hasPadding>
       <LogoText>kino</LogoText>
