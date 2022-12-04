@@ -1,9 +1,9 @@
 import initializeAxios from '@/api/common/setup';
 import {axiosRequestConfig} from '@/api/common/config';
 
-export const axiosInstance = initializeAxios(axiosRequestConfig);
+const axiosInstance = initializeAxios(axiosRequestConfig);
 
-const getAxios = async <ResponseType, ParamType>(
+export const getAxios = async <ResponseType, ParamType>(
   url: string,
   queryParams?: ParamType,
   config?: any,
@@ -13,7 +13,7 @@ const getAxios = async <ResponseType, ParamType>(
     ...config,
   });
 
-const postAxios = async <ResponseType, BodyType, ParamType>(
+export const postAxios = async <ResponseType, BodyType, ParamType>(
   url: string,
   body: BodyType,
   queryParams?: ParamType,
@@ -22,7 +22,7 @@ const postAxios = async <ResponseType, BodyType, ParamType>(
     ...(queryParams && {params: queryParams}),
   });
 
-const putAxios = async <ResponseType, BodyType, ParamType>(
+export const putAxios = async <ResponseType, BodyType, ParamType>(
   url: string,
   body: BodyType,
   queryParams?: ParamType,
@@ -31,7 +31,7 @@ const putAxios = async <ResponseType, BodyType, ParamType>(
     ...(queryParams && {params: queryParams}),
   });
 
-const patchAxios = async <ResponseType, BodyType, ParamType>(
+export const patchAxios = async <ResponseType, BodyType, ParamType>(
   url: string,
   body?: BodyType,
   queryParams?: ParamType,
@@ -40,7 +40,7 @@ const patchAxios = async <ResponseType, BodyType, ParamType>(
     ...(queryParams && {params: queryParams}),
   });
 
-const deleteAxios = async <ResponseType, BodyType, ParamType>(
+export const deleteAxios = async <ResponseType, BodyType, ParamType>(
   url: string,
   body?: BodyType,
   queryParams?: ParamType,
@@ -49,11 +49,3 @@ const deleteAxios = async <ResponseType, BodyType, ParamType>(
     ...(body && {data: body}),
     ...(queryParams && {params: queryParams}),
   });
-
-export default {
-  getAxios,
-  postAxios,
-  putAxios,
-  patchAxios,
-  deleteAxios,
-};

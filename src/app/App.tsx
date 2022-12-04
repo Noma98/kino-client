@@ -12,9 +12,11 @@ import SignIn from '@screens/SignIn';
 import {theme} from '@/styles/theme';
 import {library} from '@fortawesome/fontawesome-svg-core';
 import {fas} from '@fortawesome/free-solid-svg-icons';
+import {QueryClientProvider, QueryClient} from 'react-query';
 
 library.add(fas);
 const Stack = createStackNavigator();
+const queryClient = new QueryClient();
 
 function App() {
   const navigationRef = useNavigationContainerRef();
@@ -22,35 +24,37 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <NavigationContainer
-        ref={navigationRef}
-        theme={{
-          ...DefaultTheme,
-          colors: {...DefaultTheme.colors, background: theme.colors.black},
-        }}>
-        <StatusBar
-          barStyle="light-content"
-          backgroundColor={theme.colors.grayDark}
-        />
-        <Stack.Navigator
-          initialRouteName="SignIn"
-          screenOptions={{
-            headerStyle: {
-              backgroundColor: theme.colors.main,
-            },
-            headerTitleStyle: {
-              fontSize: theme.textSize.m,
-              color: 'white',
-            },
-            headerTitleAlign: 'center',
+      <QueryClientProvider client={queryClient}>
+        <NavigationContainer
+          ref={navigationRef}
+          theme={{
+            ...DefaultTheme,
+            colors: {...DefaultTheme.colors, background: theme.colors.black},
           }}>
-          <Stack.Screen
-            name="SignIn"
-            component={SignIn}
-            options={{headerTitle: '로그인'}}
+          <StatusBar
+            barStyle="light-content"
+            backgroundColor={theme.colors.grayDark}
           />
-        </Stack.Navigator>
-      </NavigationContainer>
+          <Stack.Navigator
+            initialRouteName="SignIn"
+            screenOptions={{
+              headerStyle: {
+                backgroundColor: theme.colors.main,
+              },
+              headerTitleStyle: {
+                fontSize: theme.textSize.m,
+                color: 'white',
+              },
+              headerTitleAlign: 'center',
+            }}>
+            <Stack.Screen
+              name="SignIn"
+              component={SignIn}
+              options={{header: () => null}}
+            />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </QueryClientProvider>
     </ThemeProvider>
   );
 }
