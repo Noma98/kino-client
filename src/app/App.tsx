@@ -1,5 +1,6 @@
 import React from 'react';
 import {StatusBar} from 'react-native';
+import {QueryClientProvider, QueryClient} from 'react-query';
 import {ThemeProvider} from 'styled-components/native';
 import {
   DefaultTheme,
@@ -8,11 +9,12 @@ import {
 } from '@react-navigation/native';
 import {useFlipper} from '@react-navigation/devtools';
 import {createStackNavigator} from '@react-navigation/stack';
-import SignIn from '@screens/SignIn';
-import {theme} from '@/styles/theme';
-import {library} from '@fortawesome/fontawesome-svg-core';
 import {fas} from '@fortawesome/free-solid-svg-icons';
-import {QueryClientProvider, QueryClient} from 'react-query';
+import {library} from '@fortawesome/fontawesome-svg-core';
+
+import {theme} from '@/styles/theme';
+import SignIn from '@screens/SignIn';
+import FasIconBtn from '@/components/common/FasIconBtn';
 
 library.add(fas);
 const Stack = createStackNavigator();
@@ -39,13 +41,27 @@ function App() {
             initialRouteName="SignIn"
             screenOptions={{
               headerStyle: {
-                backgroundColor: theme.colors.main,
+                backgroundColor: theme.colors.mainDark,
               },
               headerTitleStyle: {
                 fontSize: theme.textSize.m,
-                color: 'white',
+                color: theme.colors.white,
+                fontWeight: '700',
               },
               headerTitleAlign: 'center',
+              headerLeft: ({onPress}) => {
+                return (
+                  <FasIconBtn
+                    iconName="chevron-left"
+                    color={theme.colors.white}
+                    onPress={onPress}
+                    iconStyle={{
+                      padding: 10,
+                      marginLeft: 20,
+                    }}
+                  />
+                );
+              },
             }}>
             <Stack.Screen
               name="SignIn"
