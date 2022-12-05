@@ -1,7 +1,6 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {useForm} from 'react-hook-form';
 import styled from 'styled-components/native';
-import {AxiosError} from 'axios';
 
 import Kakao from '@/assets/images/Signin/kakao_login.png';
 import BodyWrap from '@/components/common/BodyWrap';
@@ -12,10 +11,8 @@ import TextBtn from '@/components/common/TextBtn';
 import FlexWrap from '@/components/common/FlexWrap';
 import FormInput from '@/components/common/FormInput';
 import {SignInScreenProps} from '@/types/navigation';
-import {useMutation} from 'react-query';
-import {ISignInResponse} from '@/types/api/user';
-import {signIn} from '@/api/user';
 import useSignIn from '@/hooks/User/useSignIn';
+
 interface IProps {
   navigation: SignInScreenProps['navigation'];
 }
@@ -23,6 +20,7 @@ function SignIn({navigation}: IProps) {
   const formMethods = useForm({mode: 'onBlur'});
   const {localId, password} = formMethods.watch();
   const {signInWithKakao, signInWithLocal} = useSignIn({localId, password});
+  const isButtonActive = Boolean(localId && password);
 
   const goToSignUp = () => {
     navigation.navigate('SignUp');
@@ -46,7 +44,7 @@ function SignIn({navigation}: IProps) {
         />
         <FormInput
           formMethods={formMethods}
-          placeholder="최소 8자 이상의 영문/숫자 조합"
+          placeholder="비밀번호 (8자 이상의 영문/숫자 조합)"
           rules={{
             required: '비밀번호를 입력해주세요.',
             pattern: {
@@ -60,6 +58,7 @@ function SignIn({navigation}: IProps) {
         />
         <Button
           title="로그인"
+          active={isButtonActive}
           onPress={formMethods.handleSubmit(signInWithLocal)}
         />
         <FlexWrap justifyContent="center">
