@@ -13,6 +13,7 @@ interface IProps extends IInputProps {
   name: string;
   rules?: any;
   secureText?: boolean;
+  required?: boolean;
 }
 function FormInput({formMethods, name, rules, ...inputProps}: IProps) {
   const {

@@ -2,23 +2,28 @@ import React, {useState} from 'react';
 import {TextInputProps} from 'react-native';
 import styled from 'styled-components/native';
 
-import Text from '@components/common/Text';
 import {theme} from '@/styles/theme';
+import Text from '@components/common/Text';
 import FasIconBtn from '@components/common/FasIconBtn';
+import FlexWrap from '@components/common/FlexWrap';
 
 export interface IInputProps extends TextInputProps {
   label?: string;
   placeholder?: string;
   secureText?: boolean;
+  required?: boolean;
 }
-function Input({label, secureText, ...inputProps}: IInputProps) {
+function Input({label, secureText, required, ...inputProps}: IInputProps) {
   const [isLocked, setIsLocked] = useState(!!secureText);
   const onToggleLock = () => {
     setIsLocked(!isLocked);
   };
   return (
     <>
-      {label && <Text text={label} margin="0 0 8px" fontSize="s" />}
+      <FlexWrap alignItems="flex-start">
+        {label && <Text text={label} margin="0 0 8px" fontSize="s" />}
+        {required && <Text text="*" color="secondary" fontWeight={700} />}
+      </FlexWrap>
       <InputContainer>
         <StyledInput
           {...inputProps}
