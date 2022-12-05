@@ -22,7 +22,7 @@ const initializeAxios = (config: AxiosRequestConfig): AxiosInstance => {
     const token = existedUserInfo?.accessToken;
 
     if (token) {
-      existedConfig.headers.Authorization = token;
+      existedConfig.headers.Authorization = `Bearer ${token}`;
     }
     return existedConfig;
   });
