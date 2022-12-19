@@ -14,3 +14,8 @@ export interface ILocalSignUpBody {
   password: string;
   passwordCheck: string;
 }
+export interface IKakaoSignUpBody {
+  nickname: string;
+  profileImageUrl: string;
+  kakaoId: string;
+}
