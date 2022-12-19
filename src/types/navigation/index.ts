@@ -1,9 +1,18 @@
 import {StackScreenProps} from '@react-navigation/stack';
 
-export type MainStackNavigationParamList = {
+export type AuthStackNavigationParamList = {
   SignIn: undefined;
+  SignUp: undefined;
 };
 export type SignInScreenProps = StackScreenProps<
-  MainStackNavigationParamList,
+  AuthStackNavigationParamList,
   'SignIn'
 >;
+export type SignUpScreenProps = StackScreenProps<
+  AuthStackNavigationParamList,
+  'SignUp'
+>;
+
+export type PublicStackNavigationParamList = {
+  Home: undefined;
+};
