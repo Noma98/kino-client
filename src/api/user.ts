@@ -1,5 +1,5 @@
 import {postAxios} from '@/api/common';
-import {ISignInBody, ISignInResponse} from '@/types/api/user';
+  ILocalSignUpBody,
 
 export const signIn = async (payload: ISignInBody) => {
   const res = await postAxios<ISignInResponse, ISignInBody, null>(
@@ -7,4 +7,11 @@ export const signIn = async (payload: ISignInBody) => {
     payload,
   );
   return res.data;
+};
+export const localSignUp = async (payload: ILocalSignUpBody) => {
+  const res = await postAxios<number, ILocalSignUpBody, null>(
+    '/signup/local',
+    payload,
+  );
+  return res.status;
 };

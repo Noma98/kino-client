@@ -8,3 +8,9 @@ export interface ISignInResponse {
   accessToken: string;
   refreshToken: string;
 }
+export interface ILocalSignUpBody {
+  localId: string;
+  nickname: string;
+  password: string;
+  passwordCheck: string;
+}
